@@ -1,0 +1,17 @@
+{
+  "frontendFolder": "C:/!DEV/RUNNA.WORLD/./src/main/frontend",
+  "themeFolder": "themes",
+  "themeResourceFolder": "C:/!DEV/RUNNA.WORLD/./src/main/frontend/generated/jar-resources",
+  "staticOutput": "C:/!DEV/RUNNA.WORLD/target/classes/META-INF/VAADIN/webapp/VAADIN/static",
+  "generatedFolder": "generated",
+  "statsOutput": "C:\\!DEV\\RUNNA.WORLD\\target\\classes\\META-INF\\VAADIN\\config",
+  "frontendBundleOutput": "C:\\!DEV\\RUNNA.WORLD\\target\\classes\\META-INF\\VAADIN\\webapp",
+  "devBundleOutput": "C:/!DEV/RUNNA.WORLD/target/dev-bundle/webapp",
+  "devBundleStatsOutput": "C:/!DEV/RUNNA.WORLD/target/dev-bundle/config",
+  "jarResourcesFolder": "C:/!DEV/RUNNA.WORLD/./src/main/frontend/generated/jar-resources",
+  "themeName": "",
+  "clientServiceWorkerSource": "C:\\!DEV\\RUNNA.WORLD\\target\\sw.ts",
+  "pwaEnabled": false,
+  "offlineEnabled": false,
+  "offlinePath": "'offline.html'"
+}
