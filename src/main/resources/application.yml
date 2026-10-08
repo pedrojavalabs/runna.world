@@ -1,5 +1,5 @@
 server:
-  port: 10000
+  port: ${PORT:10000}
   address: 0.0.0.0
 spring:
   datasource:
@@ -12,9 +12,3 @@ spring:
   h2:
     console:
       enabled: true
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: health,info
