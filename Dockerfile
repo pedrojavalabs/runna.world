@@ -5,11 +5,12 @@ COPY pom.xml .
 COPY src ./src
 RUN mvn clean package -DskipTests
 
-# ---- Run stage ----
 FROM eclipse-temurin:21-jre-alpine
 WORKDIR /app
-COPY --from=build /app/target/*.jar app.jar
+# Copy only the boot jar, ignore the .original one
+COPY --from=build /app/target/*-SNAPSHOT.jar app.jar
+# Alternative if your jar isn't SNAPSHOT:
+# COPY --from=build /app/target/*.jar app.jar
+
 EXPOSE 10000
-ENV PORT=10000
-# Render injects $PORT, Spring needs to listen on it
 ENTRYPOINT ["sh", "-c", "java -Dserver.port=${PORT} -jar app.jar"]
