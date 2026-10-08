@@ -1,5 +1,5 @@
 server:
-  port: 8080
+  port: ${PORT:8080}
 spring:
   datasource:
     url: jdbc:h2:mem:strava
@@ -11,3 +11,10 @@ spring:
   h2:
     console:
       enabled: true
+      # Needed so you can access H2 console on Render
+  # Add Actuator for health check (optional but recommended)
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info

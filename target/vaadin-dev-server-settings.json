@@ -9,9 +9,9 @@
   "devBundleOutput": "C:/!DEV/RUNNA.WORLD/target/dev-bundle/webapp",
   "devBundleStatsOutput": "C:/!DEV/RUNNA.WORLD/target/dev-bundle/config",
   "jarResourcesFolder": "C:/!DEV/RUNNA.WORLD/./src/main/frontend/generated/jar-resources",
-  "themeName": "",
+  "themeName": "runna-world",
   "clientServiceWorkerSource": "C:\\!DEV\\RUNNA.WORLD\\target\\sw.ts",
-  "pwaEnabled": false,
-  "offlineEnabled": false,
+  "pwaEnabled": true,
+  "offlineEnabled": true,
   "offlinePath": "'offline.html'"
 }

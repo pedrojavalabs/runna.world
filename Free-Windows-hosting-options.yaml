@@ -1,0 +1,17 @@
+services:
+    - type: web
+    name: my-java-app
+    env: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /actuator/health
+    envVars:
+            - key: SPRING_PROFILES_ACTIVE
+        value: prod
+      # Example DB - replace with your Neon/Supabase URL
+            - key: SPRING_DATASOURCE_URL
+        sync: false
+            - key: SPRING_DATASOURCE_USERNAME
+        sync: false
+            - key: SPRING_DATASOURCE_PASSWORD
+        sync: false

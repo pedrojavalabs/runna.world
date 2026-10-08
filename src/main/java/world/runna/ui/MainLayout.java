@@ -5,6 +5,7 @@ import com.vaadin.flow.component.html.H1;
 import com.vaadin.flow.component.orderedlayout.Scroller;
 import com.vaadin.flow.component.sidenav.SideNav;
 import com.vaadin.flow.component.sidenav.SideNavItem;
+import com.vaadin.flow.component.icon.VaadinIcon;
 public class MainLayout extends AppLayout {
     public MainLayout(){
         DrawerToggle toggle = new DrawerToggle();
@@ -13,6 +14,7 @@ public class MainLayout extends AppLayout {
         SideNav nav = new SideNav();
         nav.addItem(new SideNavItem("Feed", FeedView.class));
         nav.addItem(new SideNavItem("Map Explorer", MapView.class));
+        nav.addItem(new SideNavItem("Live Track", LiveTrackingView.class));
         nav.addItem(new SideNavItem("Upload", UploadView.class));
         addToNavbar(toggle,title);
         addToDrawer(new Scroller(nav));

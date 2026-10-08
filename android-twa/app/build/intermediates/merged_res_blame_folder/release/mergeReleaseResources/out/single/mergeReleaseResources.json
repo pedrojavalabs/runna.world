@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "world.runna.app-release-27:/xml_shortcuts.xml.flat",
+        "source": "world.runna.app-main-28:/xml/shortcuts.xml"
+    },
+    {
+        "merged": "world.runna.app-release-27:/xml_filepaths.xml.flat",
+        "source": "world.runna.app-main-28:/xml/filepaths.xml"
+    },
+    {
+        "merged": "world.runna.app-release-27:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "world.runna.app-main-28:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "world.runna.app-release-27:/drawable-anydpi_shortcut_legacy_background.xml.flat",
+        "source": "world.runna.app-main-28:/drawable-anydpi/shortcut_legacy_background.xml"
+    }
+]
