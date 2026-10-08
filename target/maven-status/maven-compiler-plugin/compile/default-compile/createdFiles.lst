@@ -1,6 +1,7 @@
 world\runna\model\GpsPoint.class
 world\runna\util\InMemoryMultipartFile.class
 world\runna\service\GpxParserService$ParsedResult.class
+world\runna\config\AppShell.class
 world\runna\service\ActivityService.class
 world\runna\repository\ActivityRepository.class
 world\runna\service\GpxParserService.class
