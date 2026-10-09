@@ -1,8 +1,7 @@
 server:
-  port: ${PORT:10000}
-  address: 0.0.0.0
+    port: ${PORT:10000}
+    address: 0.0.0.0
 
-# Default profile = local dev with H2
 spring:
   datasource:
     url: jdbc:h2:mem:strava
@@ -11,29 +10,34 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: false
+    open-in-view: false
   h2:
     console:
       enabled: true
 
 ---
-# Production profile = Postgres Neon on Render
 spring:
   config:
     activate:
       on-profile: prod
   datasource:
-    url: jdbc:postgresql://ep-muddy-union-zagwinxy-pooler.c-2.eu-west-2.aws.neon.tech/neondb?sslmode=require&channel_binding=require
-    username: neondb_owner
-    password: npg_l1t7kVjqiFYe
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://ep-muddy-union-zagwinxy-pooler.c-2.eu-west-2.aws.neon.tech/neondb?sslmode=require&channel_binding=require}
+    username: ${SPRING_DATASOURCE_USERNAME:neondb_owner}
+    password: ${SPRING_DATASOURCE_PASSWORD:npg_l1t7kVjqiFYe}
     driver-class-name: org.postgresql.Driver
     hikari:
       maximum-pool-size: 5
       minimum-idle: 1
+      auto-commit: false
   jpa:
     hibernate:
       ddl-auto: update
+    open-in-view: false
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
         format_sql: true
-        
+        connection:
+          provider_disables_autocommit: true
+        lob:
+          non_contextual_creation: true
