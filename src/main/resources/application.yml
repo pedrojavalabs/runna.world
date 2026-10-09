@@ -1,6 +1,8 @@
 server:
   port: ${PORT:10000}
   address: 0.0.0.0
+
+# Default profile = local dev with H2
 spring:
   datasource:
     url: jdbc:h2:mem:strava
@@ -8,7 +10,29 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
-    show-sql: true
+    show-sql: false
   h2:
     console:
       enabled: true
+
+---
+# Production profile = Postgres Neon on Render
+spring:
+  config:
+    activate:
+      on-profile: prod
+  datasource:
+    url: jdbc:postgresql://ep-muddy-union-zagwinxy-pooler.c-2.eu-west-2.aws.neon.tech/neondb?sslmode=require&channel_binding=require
+    username: neondb_owner
+    password: npg_l1t7kVjqiFYe
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      maximum-pool-size: 5
+      minimum-idle: 1
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
