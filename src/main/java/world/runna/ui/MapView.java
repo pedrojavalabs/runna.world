@@ -23,7 +23,6 @@ import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
 
 @Route("map")
-@Push // <-- CRITICAL - add this to your View class
 public class MapView extends VerticalLayout {
 
     @Autowired
