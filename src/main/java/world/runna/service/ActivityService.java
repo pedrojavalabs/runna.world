@@ -1,4 +1,5 @@
 package world.runna.service;
+
 import world.runna.dto.ActivityDTO;
 import world.runna.model.*;
 import world.runna.repository.*;
@@ -8,7 +9,6 @@ import java.time.LocalDateTime;
 import java.util.stream.Collectors;
 import java.util.List;
 import java.util.Arrays;
-
 @Service
 public class ActivityService {
     private final ActivityRepository activityRepo;
